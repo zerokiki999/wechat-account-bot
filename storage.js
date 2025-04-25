@@ -1,11 +1,11 @@
 const fs = require('fs');
 const path = require('path');
 
-// 存储账单文件路径
-const filePath = path.join(__dirname, 'bills.json');
+// File path to store the accumulated results
+const filePath = path.join(__dirname, 'results.json');
 
-// 读取账单数据
-function readBills() {
+// Read the results data
+function readResults() {
   if (fs.existsSync(filePath)) {
     const data = fs.readFileSync(filePath, 'utf8');
     return JSON.parse(data);
@@ -13,12 +13,12 @@ function readBills() {
   return [];
 }
 
-// 写入账单数据
-function saveBills(bills) {
-  fs.writeFileSync(filePath, JSON.stringify(bills, null, 2));
+// Save the results data
+function saveResults(results) {
+  fs.writeFileSync(filePath, JSON.stringify(results, null, 2));
 }
 
 module.exports = {
-  readBills,
-  saveBills
+  readResults,
+  saveResults
 };
