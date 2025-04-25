@@ -1,0 +1,9 @@
+{
+  "name": "wechat-account-bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "wechaty": "^0.60.0",
+    "qrcode": "^1.4.4"
+  }
+}
